@@ -54,4 +54,20 @@ public class GameController : MonoBehaviour {
 			p2.subtractGold (amt);
 		}
 	}
+
+	public bool checkGold(int player, int amt) {
+		if (player == 1) {
+			if (amt < p1.Gold) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			if (amt < p2.Gold) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
 }

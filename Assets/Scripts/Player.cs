@@ -6,6 +6,10 @@ public class Player {
 
 	private int gold;
 	private int goldGain;
+	private int minionLevel;
+	private int runnerLevel;
+	private int chaserLevel;
+	private int tankerLevel;
 
 	public int Gold {
 		get {
