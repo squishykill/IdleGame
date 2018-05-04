@@ -16,38 +16,60 @@ public class spawner : MonoBehaviour {
 	public GameObject chaserPlayerB;
 	public GameObject tankerPlayerB;
 
+	public GameObject currentUnitA;
+	public GameObject currentUnitB;
 
 	public int selectedUnitA;
 	public int selectedUnitB;
 
+	private List<GameObject> unitListA;
+	private List<GameObject> unitListB;
+
 	public GameController gc;
+
+	void Start() {
+		unitListA = new List<GameObject> { minionPlayerA, runnerPlayerA, chaserPlayerA, tankerPlayerA };
+		unitListB = new List<GameObject> { minionPlayerB, runnerPlayerB, chaserPlayerB, tankerPlayerB };
+		selectedUnitA = 0; //set default minion
+		selectedUnitB = 0;
+	}
 
 	void Update () {
 		myRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		if (Physics.Raycast (myRay, out hit)) {
 			hitObj = hit.transform.gameObject;
 
+			//Player1
 			if (Input.GetMouseButtonDown (0)) {
 				if (hitObj.tag == "sideA") {
-					//check which minion
-					//check if player has gold
-					//if so, summon, else, do nothing
-					gc.checkGold(1, selectedUnitA);
-					GameObject unit = Instantiate (minionPlayerA, hit.point, Quaternion.identity);
-					unit.SendMessage ("setPlayer", 1);
+					if (gc.spawnUnit (1, selectedUnitA)) {
+						int level = gc.getUnitLevel (1, selectedUnitA);
+						GameObject unit = Instantiate (unitListA [selectedUnitA], hit.point, Quaternion.identity);
+						unit.SendMessage ("setPlayer", 1);
+						unit.SendMessage ("setUnitLevel", level);
+					}
 				}
 			}
 
+			//Player2
 			if (Input.GetMouseButtonDown (1)) {
 				if (hitObj.tag == "sideB") {
-					GameObject unit = Instantiate (minionPlayerB, hit.point, Quaternion.identity);
-					unit.SendMessage ("setPlayer", 2);
+					if (gc.spawnUnit (1, selectedUnitB)) {
+						int level = gc.getUnitLevel (2, selectedUnitB);
+						GameObject unit = Instantiate (unitListB [selectedUnitB], hit.point, Quaternion.identity);
+						unit.SendMessage ("setPlayer", 2);
+						unit.SendMessage ("setUnitLevel", level);
+					}
 				}
 			}
 		}
 	}
 
-	public void setSelectedUnit(int unit) {
+	public void setSelectedUnitA(int unit) {
+		selectedUnitA = unit;
+	}
+
+	public void setSelectedUnitB(int unit) {
 		selectedUnitA = unit;
 	}
 }

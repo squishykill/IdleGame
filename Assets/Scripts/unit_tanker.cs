@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class unit_tanker : Unit {
-	List<int> hp_list = new List<int> { 1, 2, 6, 8, 12 };
+	List<int> hp_list = new List<int> { 5, 8, 12, 15, 25 };
 	List<int> atk_list = new List<int> { 5, 10, 15, 18, 20 };
 	List<float> spd_list = new List<float> { 0.5f, 0.5f, 0.5f, 0.5f, 0.5f };
-	List<int> upgrade_list = new List<int> { 100, 150, 200, 250, 300 };
-	List<int> spawn_list = new List<int> { 100, 120, 150, 180, 200 };
-	List<int> gold_production_list = new List<int> { 4, 5, 6, 7, 8 };
 
 	void Start () {
 		hp = hp_list[0];
 		atk = atk_list [0];
 		spd = spd_list [0];
-		upgradeCost = upgrade_list[0];
-		spawnCost = spawn_list[0];
-		gold_production = gold_production_list[0];
+		updateDisplay ();
 	}
 	// Update is called once per frame
 	void Update () {
@@ -28,13 +23,10 @@ public class unit_tanker : Unit {
 		}
 	}
 
-	public void upgradeUnit() {
-		level += 1;
+	public void setUnitLevel(int level) {
 		hp = hp_list[level];
 		atk = atk_list [level];
 		spd = spd_list [level];
-		upgradeCost = upgrade_list[level];
-		spawnCost = spawn_list[level];
-		gold_production = gold_production_list[level];
+		updateDisplay ();
 	}
 }
