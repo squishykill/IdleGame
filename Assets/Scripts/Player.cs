@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
 	}
 
 	public Player() {
-		Gold = 0;
+		Gold = 50;
 		GoldGain = 1;
 		minion = new manager_minion ();
 		runner = new manager_runner ();
