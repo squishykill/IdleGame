@@ -8,9 +8,9 @@ public class manager_tanker : unit_manager {
 		hp_list = new List<int> { 5, 8, 12, 15, 25 };
 		atk_list = new List<int> { 5, 10, 15, 18, 20 };
 		spd_list = new List<float> { 0.5f, 0.5f, 0.5f, 0.5f, 0.5f };
-		upgrade_list = new List<int> { 50, 100, 200, 400, 800 };
-		spawn_list = new List<int> { 100, 125, 150, 175, 200 };
-		gold_production_list = new List<int> { 3, 4, 5, 6, 7 };
+		upgrade_list = new List<int> { 100, 150, 200, 250, 300 };
+		spawn_list = new List<int> { 100, 125, 150, 180, 200 };
+		gold_production_list = new List<int> { 0, 2, 3, 4, 5 };
 
 		level = 0;
 		hp = hp_list [level];

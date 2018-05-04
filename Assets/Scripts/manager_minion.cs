@@ -9,8 +9,8 @@ public class manager_minion : unit_manager {
 		atk_list = new List<int> { 1, 2, 3, 4, 5 };
 		spd_list = new List<float> { 1f, 1f, 1f, 1f, 1f };
 		upgrade_list = new List<int> { 10, 20, 40, 80, 160 };
-		spawn_list = new List<int> { 2, 4, 8, 12, 16 };
-		gold_production_list = new List<int> { 1, 2, 3, 4, 5 };
+		spawn_list = new List<int> { 2, 4, 10, 15, 20 };
+		gold_production_list = new List<int> { 0, 1, 2, 3, 3 };
 
 		level = 0;
 		hp = hp_list [level];

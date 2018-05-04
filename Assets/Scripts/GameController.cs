@@ -58,8 +58,8 @@ public class GameController : MonoBehaviour {
 	public void displayGold() {
 		p1_gold.text = p1.Gold.ToString ();
 		p2_gold.text = p2.Gold.ToString ();
-		p1_goldGain.text = p1.GoldGain.ToString ();
-		p2_goldGain.text = p2.GoldGain.ToString ();
+		p1_goldGain.text = "+" + p1.GoldGain.ToString ();
+		p2_goldGain.text = "+" + p2.GoldGain.ToString ();
 	}
 
 	public void updateGold() {
@@ -96,22 +96,22 @@ public class GameController : MonoBehaviour {
 			case 0:
 				p1_minionLevel.text = "Lv " + p1.getUnitLevel (unit).ToString () + " | " + p1.getUnitSpawnCost (unit).ToString () + "g";
 				p1_minionUpgradeCost.text = p1.getUnitUpgradeCost (unit).ToString ();
-				p1_goldGain.text = p1.getGoldGain ().ToString ();
+				p1_goldGain.text = "+" + p1.getGoldGain ().ToString ();
 				break;
 			case 1:
 				p1_runnerLevel.text = "Lv " + p1.getUnitLevel (unit).ToString () + " | " + p1.getUnitSpawnCost (unit).ToString () + "g";
 				p1_runnerUpgradeCost.text = p1.getUnitUpgradeCost (unit).ToString ();
-				p1_goldGain.text = p1.getGoldGain ().ToString ();
+				p1_goldGain.text = "+" + p1.getGoldGain ().ToString ();
 				break;
 			case 2:
 				p1_chaserLevel.text = "Lv " + p1.getUnitLevel (unit).ToString () + " | " + p1.getUnitSpawnCost (unit).ToString () + "g";
 				p1_chaserUpgradeCost.text = p1.getUnitUpgradeCost (unit).ToString ();
-				p1_goldGain.text = p1.getGoldGain ().ToString ();
+				p1_goldGain.text = "+" + p1.getGoldGain ().ToString ();
 				break;
 			case 3:
 				p1_tankerLevel.text = "Lv " + p1.getUnitLevel (unit).ToString () + " | " + p1.getUnitSpawnCost (unit).ToString () + "g";
 				p1_tankerUpgradeCost.text = p1.getUnitUpgradeCost (unit).ToString ();
-				p1_goldGain.text = p1.getGoldGain ().ToString ();
+				p1_goldGain.text = "+" + p1.getGoldGain ().ToString ();
 				break;
 			}
 		} else {
@@ -141,14 +141,14 @@ public class GameController : MonoBehaviour {
 				if (p2.getUnitLevel (unit) <= 4) {
 					p2_minionLevel.text = "Lv " + p2.getUnitLevel (unit).ToString () + " | " + p2.getUnitSpawnCost (unit).ToString () + "g";
 					p2_minionUpgradeCost.text = p2.getUnitUpgradeCost (unit).ToString ();
-					p2_goldGain.text = p2.getGoldGain ().ToString ();
+					p2_goldGain.text = "+" + p2.getGoldGain ().ToString ();
 				}
 				break;
 			case 1:
 				if (p2.getUnitLevel (unit) <= 4) {
 					p2_runnerLevel.text = "Lv " + p2.getUnitLevel (unit).ToString () + " | " + p2.getUnitSpawnCost (unit).ToString () + "g";
 					p2_runnerUpgradeCost.text = p2.getUnitUpgradeCost (unit).ToString ();
-					p2_goldGain.text = p2.getGoldGain ().ToString ();
+					p2_goldGain.text = "+" + p2.getGoldGain ().ToString ();
 				}
 				break;
 
@@ -156,14 +156,14 @@ public class GameController : MonoBehaviour {
 				if (p2.getUnitLevel (unit) <= 4) {
 					p2_chaserLevel.text = "Lv " + p2.getUnitLevel (unit).ToString () + " | " + p2.getUnitSpawnCost (unit).ToString () + "g";
 					p2_chaserUpgradeCost.text = p1.getUnitUpgradeCost (unit).ToString ();
-					p2_goldGain.text = p2.getGoldGain ().ToString ();
+					p2_goldGain.text = "+" + p2.getGoldGain ().ToString ();
 				}
 				break;
 			case 3:
 				if (p2.getUnitLevel (unit) <= 4) {
 					p2_tankerLevel.text = "Lv " + p2.getUnitLevel (unit).ToString () + " | " + p2.getUnitSpawnCost (unit).ToString () + "g";
 					p2_tankerUpgradeCost.text = p2.getUnitUpgradeCost (unit).ToString ();
-					p2_goldGain.text = p2.getGoldGain ().ToString ();
+					p2_goldGain.text = "+" + p2.getGoldGain ().ToString ();
 				}
 				break;
 			}
