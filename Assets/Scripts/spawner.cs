@@ -43,10 +43,10 @@ public class spawner : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				if (hitObj.tag == "sideA") {
 					if (gc.spawnUnit (1, selectedUnitA)) {
-						int level = gc.getUnitLevel (1, selectedUnitA);
 						GameObject unit = Instantiate (unitListA [selectedUnitA], hit.point, Quaternion.identity);
-						unit.SendMessage ("setPlayer", 1);
-						unit.SendMessage ("setUnitLevel", level);
+						Unit u = unit.GetComponent<Unit> (); 
+						u.setStats (gc.getUnitLevel (1, selectedUnitA), gc.getUnitHp (1, selectedUnitA), gc.getUnitAtk (1, selectedUnitA),
+							gc.getUnitSpd (1, selectedUnitA), 1);
 					}
 				}
 			}
@@ -54,11 +54,11 @@ public class spawner : MonoBehaviour {
 			//Player2
 			if (Input.GetMouseButtonDown (1)) {
 				if (hitObj.tag == "sideB") {
-					if (gc.spawnUnit (1, selectedUnitB)) {
-						int level = gc.getUnitLevel (2, selectedUnitB);
+					if (gc.spawnUnit (2, selectedUnitB)) {
 						GameObject unit = Instantiate (unitListB [selectedUnitB], hit.point, Quaternion.identity);
-						unit.SendMessage ("setPlayer", 2);
-						unit.SendMessage ("setUnitLevel", level);
+						Unit u = unit.GetComponent<Unit> ();
+						u.setStats (gc.getUnitLevel (2, selectedUnitB), gc.getUnitHp (2, selectedUnitB), gc.getUnitAtk (2, selectedUnitB),
+							gc.getUnitSpd (2, selectedUnitB), 2);
 					}
 				}
 			}
@@ -70,6 +70,6 @@ public class spawner : MonoBehaviour {
 	}
 
 	public void setSelectedUnitB(int unit) {
-		selectedUnitA = unit;
+		selectedUnitB = unit;
 	}
 }

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player {
+public class Player : MonoBehaviour {
 
 	private int gold;
 	private int goldGain;
-	List<int> unitLevels = new List<int> {1, 1, 1, 1};
 
 	private manager_minion minion;
 	private manager_runner runner;
@@ -34,7 +33,7 @@ public class Player {
 
 	public Player() {
 		Gold = 0;
-		GoldGain = 2;
+		GoldGain = 1;
 		minion = new manager_minion ();
 		runner = new manager_runner ();
 		chaser = new manager_chaser ();
@@ -64,7 +63,6 @@ public class Player {
 
 		if (Gold >= amt) {
 			Gold -= amt;
-			Debug.Log (amt);
 			return true;
 		}
 		return false;
@@ -154,5 +152,62 @@ public class Player {
 
 	public int getGoldGain() {
 		return GoldGain;
+	}
+
+	public int getHp(int unit) {
+		int value = 0;
+		switch (unit) {
+		case 0:
+			value = minion.getHp ();
+			break;
+		case 1:
+			value = runner.getHp ();
+			break;
+		case 2:
+			value = chaser.getHp ();
+			break;
+		case 3:
+			value = tanker.getHp ();
+			break;
+		}
+		return value;
+	}
+
+	public int getAtk(int unit) {
+		int value = 0;
+		switch (unit) {
+		case 0:
+			value = minion.getAtk ();
+			break;
+		case 1:
+			value = runner.getAtk ();
+			break;
+		case 2:
+			value = chaser.getAtk ();
+			break;
+		case 3:
+			value = tanker.getAtk ();
+			break;
+		}
+		return value;
+	}
+
+	public float getSpd(int unit) {
+		float value = 0;
+		switch (unit) {
+		case 0:
+			value = minion.getSpd ();
+			break;
+		case 1:
+			value = runner.getSpd ();
+			break;
+		case 2:
+			value = chaser.getSpd ();
+			break;
+		case 3:
+			value = tanker.getSpd ();
+			break;
+		}
+		return value;
 	}
 }

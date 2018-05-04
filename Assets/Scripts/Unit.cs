@@ -46,4 +46,13 @@ public class Unit : MonoBehaviour {
 	public void setPlayer(int num) {
 		player = num;
 	}
+
+	public void setStats(int level_value, int hp_value, int atk_value, float spd_value, int player_value) {
+		level = level_value;
+		hp = hp_value;
+		atk = atk_value;
+		spd = spd_value;
+		player = player_value;
+		updateDisplay ();
+	}
 }

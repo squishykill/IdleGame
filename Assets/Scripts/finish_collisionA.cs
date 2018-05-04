@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class finish_collision : MonoBehaviour {
+public class finish_collisionA : MonoBehaviour {
 
 	public GameObject victory;
 	public Text result;
@@ -13,14 +13,10 @@ public class finish_collision : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "minionB") {
 			resultText = "Player B Wins!";
+			result.text = resultText;
+			result.gameObject.SetActive (true);
+			victory.gameObject.SetActive (true);
+			Time.timeScale = 0;
 		}
-
-		if (col.gameObject.tag == "minionA") {
-			resultText = "Player A Wins!";
-		}
-		result.text = resultText;
-		result.gameObject.SetActive (true);
-		victory.gameObject.SetActive (true);
-		Time.timeScale = 0;
 	}
 }

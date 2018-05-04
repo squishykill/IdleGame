@@ -9,10 +9,12 @@ public class unit_collision : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.tag == "minionB") {
-			unitA = GetComponent<Unit> ();
-			unitB = col.gameObject.GetComponent<Unit> ();
-			unitA.calculateDamage (unitB.getAttack ());
-			unitB.calculateDamage (unitA.getAttack ());
+			if (this.gameObject.tag != "minionB") {
+				unitA = GetComponent<Unit> ();
+				unitB = col.gameObject.GetComponent<Unit> ();
+				unitA.calculateDamage (unitB.getAttack ());
+				unitB.calculateDamage (unitA.getAttack ());
+			}
 		}
 	}
 }

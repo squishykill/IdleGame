@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33338683847887012}
   - component: {fileID: 65365457756980996}
   - component: {fileID: 23169863159770590}
-  - component: {fileID: 114851672145373306}
+  - component: {fileID: 114463107601012860}
   - component: {fileID: 54092721348891316}
   - component: {fileID: 114465859430283420}
   m_Layer: 0
@@ -198,6 +198,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114463107601012860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217816034500800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e38a3bd82e06d44a5e503537343122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114465859430283420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,17 +248,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114851672145373306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1217816034500800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e38a3bd82e06d44a5e503537343122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &222246461936665084
 CanvasRenderer:
   m_ObjectHideFlags: 1
