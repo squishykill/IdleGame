@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 223474172421494798}
   - component: {fileID: 114967677493642208}
   - component: {fileID: 114735206587379180}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: minion_tank_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 224564485509491934}
   - component: {fileID: 222524531686246148}
   - component: {fileID: 114363457583824188}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 114203416339030448}
   - component: {fileID: 54158934490712804}
   - component: {fileID: 114272586920381346}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: minionA_tanker
   m_TagString: minionA
   m_Icon: {fileID: 0}
@@ -175,9 +175,6 @@ MonoBehaviour:
   hp: 1
   atk: 1
   spd: 1
-  upgradeCost: 1
-  spawnCost: 1
-  gold_production: 1
   player: 0
   hp_display: {fileID: 114363457583824188}
   step: 0

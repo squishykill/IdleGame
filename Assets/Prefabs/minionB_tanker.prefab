@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 223330528371361634}
   - component: {fileID: 114415742610923688}
   - component: {fileID: 114355569353228668}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: minion_tank_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114362313575810202}
   - component: {fileID: 54010266169929232}
   - component: {fileID: 114945841540917140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: minionB_tanker
   m_TagString: minionB
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 224388071214055908}
   - component: {fileID: 222698733830176526}
   - component: {fileID: 114493548585538390}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

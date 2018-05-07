@@ -8,6 +8,8 @@ public class unit_collision : MonoBehaviour {
 	private Unit unitB;
 
 	void OnTriggerEnter(Collider col) {
+		Debug.Log (col.gameObject.tag);
+
 		if (col.gameObject.tag == "minionB") {
 			if (this.gameObject.tag != "minionB") {
 				unitA = GetComponent<Unit> ();

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224237634830707412}
   - component: {fileID: 222479120675489908}
   - component: {fileID: 114311237143667314}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 223017214002144008}
   - component: {fileID: 114351118444626204}
   - component: {fileID: 114408950458184170}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: minion_chaser_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4099430815299884}
   - component: {fileID: 135891218622489110}
   - component: {fileID: 114819889655386672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 114576450325365110}
   - component: {fileID: 54602374614487632}
   - component: {fileID: 114240941987904286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: minionB_chaser
   m_TagString: minionB
   m_Icon: {fileID: 0}
@@ -198,6 +198,7 @@ MonoBehaviour:
   player: 0
   hp_display: {fileID: 114311237143667314}
   step: 0
+  detector: {fileID: 0}
 --- !u!114 &114311237143667314
 MonoBehaviour:
   m_ObjectHideFlags: 1

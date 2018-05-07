@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 223110720856832454}
   - component: {fileID: 114465250098980212}
   - component: {fileID: 114492703674823868}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: minion_runner_canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114217097463273096}
   - component: {fileID: 54770957806145200}
   - component: {fileID: 114066078564726358}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: minionA_runner
   m_TagString: minionA
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 224240890758235664}
   - component: {fileID: 222581679619881324}
   - component: {fileID: 114107833956975918}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,9 +164,6 @@ MonoBehaviour:
   hp: 1
   atk: 1
   spd: 1
-  upgradeCost: 1
-  spawnCost: 1
-  gold_production: 1
   player: 0
   hp_display: {fileID: 114107833956975918}
   step: 0

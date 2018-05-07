@@ -9,6 +9,7 @@ TagManager:
   - minionB
   - sideA
   - sideB
+  - detector
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - p1
   - p2
-  - 
-  - 
+  - units
+  - ground
   - 
   - 
   - 

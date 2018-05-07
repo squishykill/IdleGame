@@ -26,7 +26,8 @@ public class unit_chaser_detector : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "player2") {
+		Debug.Log (col.gameObject.tag);
+		if (col.gameObject.tag == "minionB") {
 			Detection = 1;
 			DetectedObject = col.gameObject;
 		}
