@@ -51,8 +51,7 @@ public class spawner : MonoBehaviour {
 				}
 			}
 
-			//Player2
-			if (Input.GetMouseButtonDown (1)) {
+			if (Input.GetMouseButtonDown (0)) {
 				if (hitObj.tag == "sideB") {
 					if (gc.spawnUnit (2, selectedUnitB)) {
 						GameObject unit = Instantiate (unitListB [selectedUnitB], hit.point, Quaternion.identity);
@@ -62,6 +61,9 @@ public class spawner : MonoBehaviour {
 					}
 				}
 			}
+
+
+				
 		}
 	}
 

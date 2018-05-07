@@ -9,7 +9,7 @@ public class manager_runner : unit_manager {
 		atk_list = new List<int> { 1, 2, 3, 4, 6 };
 		spd_list = new List<float> { 1.4f, 1.5f, 1.6f, 1.7f, 1.8f };
 		upgrade_list = new List<int> { 40, 70, 120, 180, 200 };
-		spawn_list = new List<int> { 20, 40, 60, 80, 100 };
+		spawn_list = new List<int> { 10, 20, 30, 40, 50 };
 		gold_production_list = new List<int> { 0, 2, 3, 4, 5 };
 
 		level = 0;

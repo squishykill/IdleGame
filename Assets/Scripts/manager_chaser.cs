@@ -9,7 +9,7 @@ public class manager_chaser : unit_manager {
 		atk_list = new List<int> { 2, 4, 6, 8, 10 };
 		spd_list = new List<float> { 1f, 1f, 1f, 1f, 1f };
 		upgrade_list = new List<int> { 50, 100, 150, 200, 300 };
-		spawn_list = new List<int> { 60, 80, 110, 130, 150 };
+		spawn_list = new List<int> { 20, 40, 60, 80, 100 };
 		gold_production_list = new List<int> { 0, 2, 2, 2, 2 };
 
 		level = 0;

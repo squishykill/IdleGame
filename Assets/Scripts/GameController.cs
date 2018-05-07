@@ -44,6 +44,7 @@ public class GameController : MonoBehaviour {
 		p1 = new Player ();
 		p2 = new Player ();
 		displayInfo ();
+		Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
@@ -60,6 +61,14 @@ public class GameController : MonoBehaviour {
 		p2_gold.text = p2.Gold.ToString ();
 		p1_goldGain.text = "+" + p1.GoldGain.ToString ();
 		p2_goldGain.text = "+" + p2.GoldGain.ToString ();
+	}
+
+	public int getGold(int p) {
+		if (p == 1) {
+			return p1.Gold;
+		} else {
+			return p2.Gold;
+		}
 	}
 
 	public void updateGold() {
@@ -241,6 +250,82 @@ public class GameController : MonoBehaviour {
 			return p1.getSpd (unit);
 		} else {
 			return p2.getSpd (unit);
+		}
+	}
+
+	public int getUnitSpawnCost(int player, int unit) {
+		if (player == 1) {
+			int value = 0;
+			switch (unit) {
+			case 0:
+				value = p1.getUnitSpawnCost (0);
+				break;
+			case 1:
+				value = p1.getUnitSpawnCost (1);
+				break;
+			case 2:
+				value = p1.getUnitSpawnCost (2);
+				break;
+			case 3:
+				value = p1.getUnitSpawnCost (3);
+				break;
+			}
+			return value;
+		} else {
+			int value = 0;
+			switch (unit) {
+			case 0:
+				value = p2.getUnitSpawnCost (0);
+				break;
+			case 1:
+				value = p2.getUnitSpawnCost (1);
+				break;
+			case 2:
+				value = p2.getUnitSpawnCost (2);
+				break;
+			case 3:
+				value = p2.getUnitSpawnCost (3);
+				break;
+			}
+			return value;
+		}
+	}
+
+	public int getUnitUpgradeCost(int player, int unit) {
+		if (player == 1) {
+			int value = 0;
+			switch (unit) {
+			case 0:
+				value = p1.getUnitUpgradeCost (0);
+				break;
+			case 1:
+				value = p1.getUnitUpgradeCost (1);
+				break;
+			case 2:
+				value = p1.getUnitUpgradeCost (2);
+				break;
+			case 3:
+				value = p1.getUnitUpgradeCost (3);
+				break;
+			}
+			return value;
+		} else {
+			int value = 0;
+			switch (unit) {
+			case 0:
+				value = p2.getUnitUpgradeCost (0);
+				break;
+			case 1:
+				value = p2.getUnitUpgradeCost (1);
+				break;
+			case 2:
+				value = p2.getUnitUpgradeCost (2);
+				break;
+			case 3:
+				value = p2.getUnitUpgradeCost (3);
+				break;
+			}
+			return value;
 		}
 	}
 

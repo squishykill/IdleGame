@@ -41,7 +41,9 @@ public class Player : MonoBehaviour {
 	}
 
 	public void increaseGold() {
-		Gold += goldGain;
+		if (Gold <= 500) {
+			Gold += goldGain;
+		}
 	}
 
 	public bool subtractGold(int unit) {
