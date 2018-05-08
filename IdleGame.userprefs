@@ -1,21 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\spawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\manager_tanker.cs">
     <Files>
       <File FileName="Assets\Scripts\spawner.cs" Line="41" Column="4" />
       <File FileName="Assets\Scripts\unit_collision.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Unit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\unit_basic.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\unit_runner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\unit_chaser.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\unit_tanker.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\manager_minion.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\manager_runner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\manager_chaser.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\manager_tanker.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\manager_runner.cs" Line="11" Column="55" />
+      <File FileName="Assets\Scripts\manager_chaser.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\manager_tanker.cs" Line="10" Column="63" />
       <File FileName="Assets\Scripts\Summon_Check.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\unit_chaser_detector.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\unit_chaser.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
